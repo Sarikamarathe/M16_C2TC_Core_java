@@ -27,7 +27,7 @@ public class Example2 {
 		System.out.println("\nEnter Percentage:");
 		double c=sc.nextDouble();
 		System.out.println("Percentage:"+c);
-		
+		sc.close();
 		
 	}
 	
