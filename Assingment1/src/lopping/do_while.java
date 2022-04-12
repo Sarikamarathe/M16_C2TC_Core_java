@@ -1,4 +1,4 @@
-package looping;
+package lopping;
 
 public class do_while {
 

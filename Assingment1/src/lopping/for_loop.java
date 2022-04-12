@@ -1,4 +1,4 @@
-package looping;
+package lopping;
 
 public class for_loop {
 
@@ -7,7 +7,8 @@ public class for_loop {
 			for(int j=1;j<=i;j++) {
 				System.out.printf("@");
 			}
-			System.out.println();
+		System.out.println();
+				
 		}
 
 	}
