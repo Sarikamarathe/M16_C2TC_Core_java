@@ -3,6 +3,20 @@ package com.cg.git;
 import java.util.Scanner;
 
 public class student {
+	
+	String name=" ";
+	int marks=0;
+	
+	public student(String n,int m) {
+		name=n;
+		marks=m;
+	}
+	public void display() {
+		System.out.printf("Name:"+name);
+		System.out.printf("\nMarks:"+marks);
+
+	}
+	
 
 	public static void main(String[] args) {
 		
@@ -12,8 +26,8 @@ public class student {
 		System.out.printf("enter the marks:");
 		int s_marks=sc.nextInt();
 		
-		studentobj s=new studentobj(s_name,s_marks);
-		s.show_details();
+		student s=new student(s_name,s_marks);
+		s.display();
 		
 		
 
