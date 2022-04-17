@@ -1,7 +1,8 @@
 package com.indiabixinheritance;
 
 
-class a{
+class a
+{
 	void print() {
 		System.out.println("hello");
 	}
