@@ -16,8 +16,50 @@ public class CRUD {
 		try
 		{
 			Connection con=DriverManager.getConnection(dbURL, username, password);
-			String sql="SELECT * FROM Employee22";
+			/*String sql="DELETE FROM Employee22 WHERE user_id=2";
+			PreparedStatement s=con.prepareStatement(sql);
+			int rows=s.executeUpdate();
+			
+			if(rows>0)
+			{
+				System.out.println("A new User Information enter successfully");
+			}
+			con.close();*/ //delete
+
+			String sql="SELECT *FROM Employee22";
+
 			Statement st=con.createStatement();
+			ResultSet r=st.executeQuery(sql);
+			int count=1;
+			while(r.next())
+			{
+				//int id=r.getInt(0);
+				String name=r.getString(2);
+				String password1=r.getString(3);
+				String email1=r.getString(4);
+				String result="USER: %d %s %s %s";
+				System.out.println(String.format(result, count++,name,password1,email1));
+				
+			}
+			con.close();//select
+
+			/*String sql="UPDATE EMployee22 SET user_name=?,password=? WHERE user_id=1";
+			PreparedStatement s=con.prepareStatement(sql);
+			
+			s.setString(1, "Sarika_Marathe");
+			s.setString(2, "Pass@124");
+			//s.setString(3, "sarika@gmail.com");
+			//s.setInt(0, 1);
+			int rows=s.executeUpdate();
+			
+			if(rows>0)
+			{
+				System.out.println("A new User Information enter successfully");
+			}
+			con.close();*/ //update
+			//String sql="SELECT *FROM Employee22";
+
+			/*Statement st=con.createStatement();
 			ResultSet r=st.executeQuery(sql);
 			int count=1;
 			while(r.next())
@@ -43,7 +85,7 @@ public class CRUD {
 			{
 				System.out.println("A new User Information enter successfully");
 			}
-			con.close();*/
+			con.close();*/ //insert
 		}
 		catch(SQLException e)
 		{
