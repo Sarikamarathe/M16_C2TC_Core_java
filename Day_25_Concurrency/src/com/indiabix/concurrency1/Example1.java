@@ -1,4 +1,4 @@
-package com.indiabix.concurrency;
+package com.indiabix.concurrency1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
